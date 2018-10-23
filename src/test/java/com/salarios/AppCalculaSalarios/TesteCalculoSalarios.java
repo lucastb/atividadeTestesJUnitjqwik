@@ -12,8 +12,8 @@ class TesteCalculoSalarios {
 	@Test
 	void testeGetSalarioBrutoSimples() {
 		
-		Funcionario f1 = new Funcionario(12345,0,"Fulano", 1000.00,false);
-		double salarioBruto = f1.getSalarioBruto();
+		Funcionario f = new Funcionario(112233,0,"João", 1000.00,false);
+		double salarioBruto = f.getSalarioBruto();
 		assertEquals(1000.0,salarioBruto);
 	}
 	
