@@ -12,22 +12,22 @@ class TesteCalculoSalarios {
 	@Test
 	void testeGetSalarioBrutoSimples() {
 		
-		Funcionario f = new Funcionario(112233,0,"João", 1000.00,false);
+		Funcionario f = new Funcionario(112233,0,"João", 2000.00,false);
 		double salarioBruto = f.getSalarioBruto();
-		assertEquals(1000.0,salarioBruto);
+		assertEquals(2000.0,salarioBruto);
 	}
 	
 	@Test
 	void testeGetSalarioBruto1Dependente() {
-		Funcionario f1 = new Funcionario(12345,1,"Fulano", 1000.00,false);
-		double salarioBruto = f1.getSalarioBruto();
-		assertEquals(1010.0,salarioBruto);
+		Funcionario f = new Funcionario(112233,1,"João", 2000.00,false);
+		double salarioBruto = f.getSalarioBruto();
+		assertEquals(2010.0,salarioBruto);
 	}
 	
 	@Test
 	void testeGetSalarioBruto2Dependentes() {
-		Funcionario f1 = new Funcionario(12345,2,"Fulano", 1000.00,false);
-		double salarioBruto = f1.getSalarioBruto();
+		Funcionario f = new Funcionario(12345,2,"Fulano", 1000.00,false);
+		double salarioBruto = f.getSalarioBruto();
 		assertEquals(1020.0,salarioBruto);
 	}
 	
