@@ -58,17 +58,22 @@ public class Funcionario {
 		
 		//INSS
 		inssTemp = (getSalarioBase()*4.5)/100;
-		if(inssTemp <= 5000) {
+		if (inssTemp <= 5000) {
 			inss = inssTemp;
 		}else inss = 5000;
 		
 		//IR
-		if(getSalarioBase() <= 2000) { //isento
-			ir = 0;
-		}else if ((getSalarioBase() > 2000) && (getSalarioBase() <= 5000)){ //paga 12% IR
-			ir = (getSalarioBase()*12)/100;
-		}else if(getSalarioBase() > 5000) {  //paga 27% IR
-			ir = (getSalarioBase()*27.5)/100;
+		if		(getSalarioBase() <= 2000)
+		{} /*isento*/
+		
+		else if (2000 < getSalarioBase() && getSalarioBase() <= 5000 )
+		{ //paga 12% IR
+			ir = getSalarioBase()*0.12;
+		}
+		
+		else if (getSalarioBase() > 5000)
+		{  //paga 27% IR
+			ir = getSalarioBase()*0.275;
 		}
 			
 		//Liquido
@@ -80,6 +85,4 @@ public class Funcionario {
 	public boolean getInsalubridade() {
 		return insalubridade;
 	}
-	
-
 }
